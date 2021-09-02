@@ -15,13 +15,11 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-
         <dependency>
             <groupId>com.qs.libs</groupId>
             <artifactId>qstool-spring-boot-starter</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
