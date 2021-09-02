@@ -45,6 +45,17 @@
             <dependency>
                 <groupId>com.qs.libs</groupId>
                 <artifactId>qstool-spring-boot-autoconfigure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qs.libs</groupId>
+                <artifactId>qstool-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.qs.libs</groupId>
+                <artifactId>qstool-core</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <!-- module management end -->
         </dependencies>
