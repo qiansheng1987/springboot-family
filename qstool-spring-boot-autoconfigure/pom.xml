@@ -17,6 +17,13 @@
         <spring-native.version>0.10.3</spring-native.version>
     </properties>
     <dependencies>
+        <!--业务引用开始-->
+        <dependency>
+            <groupId>com.qs.libs</groupId>
+            <artifactId>qstool-core</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!--业务引用结束-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>

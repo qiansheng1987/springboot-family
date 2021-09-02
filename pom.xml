@@ -18,6 +18,8 @@
     <modules>
         <module>qstool-spring-boot-autoconfigure</module>
         <module>qstool-spring-boot-starter</module>
+        <module>qstool-core</module>
+        <module>qstool-spring-boot-samples</module>
     </modules>
 
     <properties>

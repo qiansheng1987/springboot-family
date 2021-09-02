@@ -1,4 +1,4 @@
-package com.qs.demo.toolspringbootautoconfigure;
+package com.qs.libs.toolautoconfigure;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
