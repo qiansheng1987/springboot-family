@@ -16,7 +16,7 @@
     <name>qs-springboot-family</name>
 
     <modules>
-        <module>qstool-springboot-autoconfigure</module>
+        <module>qstool-spring-boot-autoconfigure</module>
         <module>qstool-spring-boot-starter</module>
     </modules>
 
@@ -43,17 +43,10 @@
             <dependency>
                 <groupId>com.qs.libs</groupId>
                 <artifactId>qstool-spring-boot-autoconfigure</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.qs.libs</groupId>
-                <artifactId>qstool-spring-boot-starter</artifactId>
-                <version>${project.parent.version}</version>
             </dependency>
             <!-- module management end -->
         </dependencies>
     </dependencyManagement>
-
 
     <build>
         <pluginManagement>
@@ -82,14 +75,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>3.2.1</version>
-                    <executions>
-                        <execution>
-                            <id>attach-sources</id>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -100,14 +85,6 @@
                             <additionalOption>-Xdoclint:none</additionalOption>
                         </additionalOptions>
                     </configuration>
-                    <executions>
-                        <execution>
-                            <id>attach-javadocs</id>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
