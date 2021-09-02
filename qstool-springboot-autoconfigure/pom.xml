@@ -8,7 +8,6 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.qs.libs</groupId>
     <artifactId>tool-springboot-autoconfigure</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>tool-springboot-autoconfigure</name>
