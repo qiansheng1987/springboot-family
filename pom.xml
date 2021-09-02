@@ -6,14 +6,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.2.RELEASE</version>
-        <relativePath/>
+        <version>2.5.4</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.qs.demo</groupId>
-    <artifactId>springboot</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.qs.libs</groupId>
+    <artifactId>qs-springboot-family</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>springboot</name>
+    <name>qs-springboot-family</name>
 
     <modules>
     </modules>
