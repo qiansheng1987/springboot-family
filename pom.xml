@@ -20,6 +20,7 @@
         <module>qstool-spring-boot-starter</module>
         <module>qstool-core</module>
         <module>qstool-spring-boot-samples</module>
+        <module>qs-design-pattern</module>
     </modules>
 
     <properties>
@@ -37,6 +38,14 @@
         <mybatis-plus.version>3.3.2</mybatis-plus.version>
         <mybatis-spring-boot.version>2.1.0</mybatis-spring-boot.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.36.Final</version>
+        </dependency>
+    </dependencies>
 
     <!--在dependencyManagement元素中声明所依赖的jar包的版本号等信息，
     那么所有子项目再次引入此依赖jar包时则无需显式的列出版本号。
