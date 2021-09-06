@@ -107,7 +107,7 @@ public class OperationLogAop {
             ex = e;
         }
 
-        log.info("记录日志: {}", baseLog);
+        log.error("记录日志: {}", baseLog);
         // 处理保存日志
         // saveLog(baseLog);
         if (ex != null) {
