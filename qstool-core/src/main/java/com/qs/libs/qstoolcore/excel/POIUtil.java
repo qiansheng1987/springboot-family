@@ -12,7 +12,7 @@ import java.util.Iterator;
  * <p>
  * Change description here.
  *
- * @author 钟俊 (jun.zhong), email: jun.zhong@ucarinc.com
+ * @author qiansheng
  * @date 4/30/20 6:37 PM
  **/
 public class POIUtil {
@@ -41,11 +41,13 @@ public class POIUtil {
 
         toStyle.setDataFormat(fromStyle.getDataFormat());
         toStyle.setFillPattern(fromStyle.getFillPattern());
-//		toStyle.setFont(fromStyle.getFont(null));
+		//toStyle.setFont(fromStyle.getFont(null));
         toStyle.setHidden(fromStyle.getHidden());
-        toStyle.setIndention(fromStyle.getIndention());//首行缩进
+        //首行缩进
+        toStyle.setIndention(fromStyle.getIndention());
         toStyle.setLocked(fromStyle.getLocked());
-        toStyle.setRotation(fromStyle.getRotation());//旋转
+        //旋转
+        toStyle.setRotation(fromStyle.getRotation());
         toStyle.setVerticalAlignment(fromStyle.getVerticalAlignment());
         toStyle.setWrapText(fromStyle.getWrapText());
     }

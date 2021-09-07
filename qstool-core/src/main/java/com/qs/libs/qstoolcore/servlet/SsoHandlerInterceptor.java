@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * SsoHandlerInterceptor
  *
- * @author qiansheng@yunji.ai
+ * @author qiansheng
  * @date 2021/9/2 下午1:51
  */
 @Component

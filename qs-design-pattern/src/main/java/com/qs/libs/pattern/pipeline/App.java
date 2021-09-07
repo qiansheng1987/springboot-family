@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * TODO
  *
- * @author qiansheng@yunji.ai
+ * @author qiansheng
  * @date 2021/9/3 下午3:06
  */
 public class App {

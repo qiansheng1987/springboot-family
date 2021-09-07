@@ -2,7 +2,9 @@ package com.qs.libs.qstoolcore.excel;
 
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.util.ObjectUtil;
+import com.qs.libs.qstoolcommon.enums.base.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -31,14 +33,6 @@ import java.util.*;
 /**
  * <h1>AbstractExcelImportController</h1>
  * <p>Excel 表格数据导入抽象类。</p>
- * <h1>亮点功能</h1>
- * <p>经过 <code>钟俊 (jun.zhong)</code> 改造，给该类增添许多令人激动的新特性：</p>
- * <ol>
- * <li>将校验有错误、不通过的 Excel 的行，复制到一个新的 Excel 表中，将校验有误信息放在最后一列，通过将这个新的 Excel 表上传到 UDFS，提供文件 URL 给前端进行下载；</li>
- * <li>范型的加持  - <code>ExcelImportBeanType</code>。在 <code>ExcelImportBeanType</code> 中定义 Excel 表的中各个列数据（即表头）；</li>
- * <li>在自定义表头类 <code>ExcelImportBeanType</code> 中使用 <code>@ExcelColumn</code> 来对表头对中文名称进行标注，可以达到事半功倍对效果。还增加 Excel
- * 单元格类型的支持，默认为 <code>Cell.CELL_TYPE_STRING</code>；</li>
- * <li>支持部分导入。</li>
  *
  * </ol>
  * <h1>理解生命周期（生命钩子）</h1>
@@ -74,7 +68,7 @@ import java.util.*;
  * <p>销毁当前线程的现场环境。与 <code>initLocaleContext()</code> 相对应。</p>
  *
  * @param <ExcelImportBeanType> 导入 Excel 表的 bean 的类型
- * @author 钟俊 (jun.zhong), email: jun.zhong@ucarinc.com
+ * @author qiansheng
  * @date 4/28/20 2:32 PM
  */
 @Slf4j
@@ -280,7 +274,7 @@ public abstract class AbstractExcelImportController<ExcelImportBeanType> {
      * @return String result
      */
     @PostMapping(value = "/upload", headers = "content-type=multipart/form-data")
-    public Result upload(HttpServletRequest request, HttpServletResponse response) {
+    public ApiResponse upload(HttpServletRequest request, HttpServletResponse response) {
         beforeExecute();
         initLocaleContext();
         try {
@@ -334,10 +328,8 @@ public abstract class AbstractExcelImportController<ExcelImportBeanType> {
         excelImportResult.setExcelFilePath(this.excelFilePath.get());
         afterExecute();
         destroyLocaleContext();
-        return success(excelImportResult);
+        return ApiResponse.success(excelImportResult);
     }
-
-    protected abstract Result success(ExcelImportResult excelImportResult);
 
     /**
      * 执行前钩子方法，默认不执行任何操作
