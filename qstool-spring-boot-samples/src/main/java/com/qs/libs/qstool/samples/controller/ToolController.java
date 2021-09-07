@@ -1,18 +1,27 @@
 package com.qs.libs.qstool.samples.controller;
 
+import com.qs.libs.qstool.samples.controller.model.UserCmd;
 import com.qs.libs.qstoolcore.logging.annotation.OperationLogAnnotation;
 import com.qs.libs.qstoolcore.logging.enums.OperationTypeEnum;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/tool")
 public class ToolController {
 
-    @GetMapping("/v1/mvc")
+    @PostMapping("/v1/mvc")
     @OperationLogAnnotation(type = OperationTypeEnum.SELECT, prefix = "用户ID")
-    public Boolean testInterceptor(){
-        return true;
+    public Object testInterceptor(@RequestBody UserCmd cmd){
+        return cmd;
+    }
+
+    /**
+     * 该接口在切面中，记录的日志内容为：
+     * 用户名称:zhangsan,昵称:张三
+     */
+    @OperationLogAnnotation(type = OperationTypeEnum.INSERT, prefix = {"用户名称", "年龄"}, field = {"name", "age"})
+    @PostMapping
+    public Object save(@RequestBody UserCmd user) {
+        return user;
     }
 }

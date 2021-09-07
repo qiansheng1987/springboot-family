@@ -20,6 +20,7 @@
         <module>qstool-spring-boot-starter</module>
         <module>qstool-core</module>
         <module>qstool-spring-boot-samples</module>
+        <module>qstool-common</module>
         <module>qs-design-pattern</module>
     </modules>
 
