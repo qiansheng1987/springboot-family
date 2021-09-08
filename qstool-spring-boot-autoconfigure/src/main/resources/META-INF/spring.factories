@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.qs.libs.qstoolcore.servlet.WebMvcConfig
+  com.qs.libs.qstoolcore.servlet.WebMvcConfig,\
+  com.qs.libs.toolautoconfigure.threadpool.ThreadPoolConfiguration

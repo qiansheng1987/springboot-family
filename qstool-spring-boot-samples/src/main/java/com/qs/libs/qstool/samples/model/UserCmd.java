@@ -1,12 +1,12 @@
-package com.qs.libs.qstool.samples.controller.model;
+package com.qs.libs.qstool.samples.model;
 
 import lombok.Data;
 
 /**
- * User
+ * UserCmd
  *
  * @author qiansheng
- * @date 2021/9/6 下午6:05
+ * @date 2021/9/8 下午1:34
  */
 @Data
 public class UserCmd {

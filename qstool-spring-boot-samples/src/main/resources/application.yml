@@ -1,3 +1,12 @@
 logging:
   level:
-    org.springframework: info
+    org.springframework: debug
+
+# 线程池配置
+thread:
+  config:
+    corePoolSize: 20
+    maxPoolSize: 200
+    queueCapacity: 50
+    keepAlive: 100
+    threadNamePrefix: faq
